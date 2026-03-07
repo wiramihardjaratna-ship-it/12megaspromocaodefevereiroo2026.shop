@@ -6,169 +6,126 @@
 <title>Mega Feirão</title>
 
 <style>
-:root {
-    --primary: #16a34a;
-    --dark: #0f172a;
-    --bg: #f8fafc;
-    --card: #ffffff;
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f1f5f9;
 }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
+.header{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:15px;
+font-size:14px;
 }
 
-/* TOPO CHECKOUT */
-.topbar {
-    background: var(--dark);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
+.container{
+max-width:500px;
+margin:auto;
+padding:20px;
 }
 
-/* CONTAINER */
-.container {
-    padding: 20px;
-    max-width: 480px;
-    margin: auto;
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* CARD PRINCIPAL */
-.checkout-box {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+h1{
+font-size:22px;
+margin-bottom:10px;
 }
 
-/* TITULO */
-h1 {
-    font-size: 22px;
-    margin: 0 0 10px 0;
+.description{
+font-size:14px;
+color:#475569;
+margin-bottom:20px;
 }
 
-/* TIMER */
-.timer {
-    font-size: 28px;
-    font-weight: bold;
-    color: #dc2626;
-    margin: 10px 0;
+.benefits{
+margin-bottom:20px;
+font-size:14px;
 }
 
-/* ALERTA */
-.alert {
-    background: #fef2f2;
-    color: #b91c1c;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 13px;
-    margin-bottom: 10px;
+.benefits div{
+margin-bottom:8px;
 }
 
-/* ONLINE */
-.online {
-    font-size: 13px;
-    margin-bottom: 15px;
+.cta{
+display:block;
+text-align:center;
+background:#16a34a;
+color:white;
+padding:18px;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
 }
 
-/* BENEFICIOS */
-.benefits {
-    font-size: 14px;
-    margin-bottom: 20px;
+.footer{
+margin-top:20px;
+font-size:12px;
+color:#64748b;
+text-align:center;
 }
 
-.benefits div {
-    margin-bottom: 8px;
+.links{
+margin-top:10px;
+font-size:12px;
 }
 
-/* BOTÃO */
-.cta {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    border-radius: 14px;
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+.links a{
+color:#2563eb;
+text-decoration:none;
+margin:0 5px;
 }
 
-/* RODAPÉ */
-.secure {
-    text-align: center;
-    font-size: 12px;
-    color: #64748b;
-    margin-top: 15px;
-}
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-🔒 Ambiente 100% Seguro
+<div class="header">
+🔒 Ambiente seguro
 </div>
 
 <div class="container">
-    <div class="checkout-box">
-        
-        <h1>🔥 Mega Feirão Liberado</h1>
-        
-        <div class="timer" id="timer">03:00</div>
 
-        <div class="alert">
-        ⚠️ Oferta expira quando o tempo zerar
-        </div>
+<div class="card">
 
-        <div class="online" id="online">
-        👥 132 pessoas estão finalizando agora
-        </div>
+<h1>Mega Feirão de Ofertas</h1>
 
-        <div class="benefits">
-            <div>✔ Desconto exclusivo hoje</div>
-            <div>✔ Liberação imediata</div>
-            <div>✔ Garantia total</div>
-        </div>
-
-        <a class="cta" href="https://thepeakyblinderzz-beep.github.io/3feirao/inicio/">
-        🔥 FINALIZAR AGORA
-        </a>
-
-        <div class="secure">
-        Pagamento seguro • Acesso imediato
-        </div>
-
-    </div>
+<div class="description">
+Confira as ofertas disponíveis e garanta condições especiais liberadas por tempo limitado.
 </div>
 
-<script>
-// TIMER
-let time = 180;
-const timer = document.getElementById("timer");
+<div class="benefits">
+<div>✔ Descontos exclusivos</div>
+<div>✔ Acesso imediato após confirmação</div>
+<div>✔ Suporte ao cliente disponível</div>
+</div>
 
-setInterval(() => {
-    let min = Math.floor(time / 60);
-    let sec = time % 60;
+<a class="cta" href="https://thepeakyblinderzz-beep.github.io/3feirao/inicio/">
+VER OFERTA DISPONÍVEL
+</a>
 
-    timer.innerText =
-        (min < 10 ? "0" : "") + min + ":" +
-        (sec < 10 ? "0" : "") + sec;
+<div class="footer">
+Pagamento seguro • Acesso após confirmação
+</div>
 
-    if (time > 0) time--;
-}, 1000);
+<div class="links">
+<a href="#">Política de Privacidade</a> |
+<a href="#">Termos de Uso</a> |
+<a href="#">Contato</a>
+</div>
 
-// ONLINE
-const online = document.getElementById("online");
+</div>
 
-setInterval(() => {
-    let num = Math.floor(Math.random() * 40) + 120;
-    online.innerText = "👥 " + num + " pessoas estão finalizando agora";
-}, 3000);
-</script>
+</div>
 
 </body>
 </html>
